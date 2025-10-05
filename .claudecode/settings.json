@@ -1,0 +1,60 @@
+{
+  "projectContext": {
+    "name": "Audio DSP Experiments",
+    "description": "Monorepo for audio synthesis, effects, and analysis plugins built in Rust",
+    "primaryLanguage": "Rust",
+    "currentFocus": "naughty-and-tender - First MIDI synthesizer plugin"
+  },
+
+  "workingStyle": {
+    "verbosity": "balanced",
+    "codeComments": "explain-complex-dsp",
+    "preferredApproach": "incremental-learning"
+  },
+
+  "codePreferences": {
+    "rust": {
+      "preferIdiomatic": true,
+      "realTimeSafety": true,
+      "noAllocInAudioThread": true,
+      "preferStructs": true,
+      "documentation": "doc-comments-for-public-api"
+    },
+    "dsp": {
+      "commentAlgorithms": true,
+      "includeReferences": true,
+      "explainMath": true,
+      "unitTests": "required-for-algorithms"
+    }
+  },
+
+  "projectStructure": {
+    "subprojects": [
+      "naughty-and-tender",
+      "shared"
+    ],
+    "importantDirs": [
+      "docs/",
+      "shared/",
+      "naughty-and-tender/src/"
+    ]
+  },
+
+  "documentation": {
+    "autoUpdate": false,
+    "learningsCapture": true,
+    "dspExplanations": "include-in-comments"
+  },
+
+  "testing": {
+    "approach": "test-critical-dsp",
+    "frequencyAccuracy": "required",
+    "edgeCases": true
+  },
+
+  "git": {
+    "commitStyle": "conventional-commits",
+    "coAuthor": true,
+    "autoStage": false
+  }
+}
