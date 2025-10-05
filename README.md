@@ -139,7 +139,9 @@ This repository uses GitHub Projects for task tracking and planning. See [projec
 - **Categories**: Synthesis, Effects, Analysis, Infrastructure, etc.
 - **Learning Focus**: Specific DSP concepts being explored
 
-[→ View the project board](https://github.com/colcavanaugh/audio-experiments/projects/1) *(link TBD after repo creation)*
+[→ View all issues](https://github.com/colcavanaugh/audio-experiments/issues)
+
+**Note**: GitHub Project board setup in progress - follow [this guide](./docs/github-project-setup-guide.md) to configure custom fields and views
 
 ## Learning Resources
 
