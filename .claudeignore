@@ -1,0 +1,160 @@
+# Claude Code Ignore File
+# Files and directories Claude cannot access
+
+# ====================
+# Sensitive Files
+# ====================
+
+# Environment variables and secrets
+**/.env
+**/.env.*
+!**/.env.example
+**/*.key
+**/*.pem
+**/*.p12
+**/*.pfx
+**/secrets.*
+**/credentials.*
+**/*secret*
+**/*password*
+**/*token*
+
+# SSH and GPG keys
+**/.ssh/
+**/.gnupg/
+
+# ====================
+# Git Internals
+# ====================
+
+# Git configuration (contains user info, remote URLs)
+.git/config
+.git/hooks/
+
+# Git index (can be large, unnecessary)
+.git/index
+.git/objects/
+
+# Keep .git/HEAD readable (needed for branch info)
+# .git/HEAD is NOT ignored
+
+# ====================
+# Build Artifacts
+# ====================
+
+# Rust build artifacts (large, auto-generated)
+**/target/debug/
+**/target/release/
+**/target/doc/
+**/target/.rustc_info.json
+
+# Keep Cargo.lock readable (needed for dependency info)
+# Cargo.lock is NOT ignored
+
+# Node modules (if using for tooling)
+**/node_modules/
+**/.npm/
+**/.pnpm-store/
+
+# ====================
+# OS-Specific Files
+# ====================
+
+# macOS
+**/.DS_Store
+**/.AppleDouble
+**/.LSOverride
+
+# Windows
+**/Thumbs.db
+**/Desktop.ini
+**/$RECYCLE.BIN/
+
+# Linux
+**/.Trash-*/
+
+# ====================
+# IDE & Editor Files
+# ====================
+
+# VSCode workspace-specific (user preferences)
+**/.vscode/settings.json
+**/.vscode/*.code-workspace
+
+# Keep .vscode/tasks.json and launch.json accessible
+# (needed for development context)
+
+# JetBrains (if you use CLion/IntelliJ for Rust)
+**/.idea/workspace.xml
+**/.idea/tasks.xml
+**/.idea/**/usage.statistics.xml
+
+# ====================
+# Temporary Files
+# ====================
+
+# Temporary editor files
+**/*~
+**/*.swp
+**/*.swo
+**/*.tmp
+**/*.temp
+
+# Logs (usually safe, but can be large)
+**/*.log
+**/logs/
+
+# ====================
+# Session-Specific
+# ====================
+
+# Sensitive session notes (if you add personal notes)
+.sessions/**/*.private.md
+.sessions/**/*.sensitive.md
+
+# Keep regular session status/guides accessible
+# (needed for workflow continuity)
+
+# ====================
+# Personal Notes
+# ====================
+
+# If you keep personal brainstorming that shouldn't be touched
+**/personal-notes/
+**/drafts/
+**/*.draft.md
+**/*.wip.md
+
+# ====================
+# Audio-Specific
+# ====================
+
+# Compiled audio plugins (binary, large)
+**/*.vst3
+**/*.vst
+**/*.au
+**/*.component
+
+# Audio files (can be large, usually test files)
+**/*.wav
+**/*.mp3
+**/*.flac
+**/*.aiff
+
+# Plugin state files (user presets, settings)
+**/Library/Audio/Plug-Ins/**
+
+# ====================
+# Future-Proofing
+# ====================
+
+# Backup files
+**/*.bak
+**/*.backup
+**/*.old
+
+# Archive files (can be large)
+**/*.zip
+**/*.tar
+**/*.gz
+**/*.7z
