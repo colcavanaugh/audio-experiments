@@ -49,12 +49,26 @@
   "testing": {
     "approach": "test-critical-dsp",
     "frequencyAccuracy": "required",
-    "edgeCases": true
+    "edgeCases": true,
+    "verifyAfterImplementation": true,
+    "minimumForDSP": "critical-paths"
+  },
+
+  "ideDiagnostics": {
+    "autoFix": true,
+    "useBeforeCoding": true,
+    "prioritizeRealTimeSafety": true
   },
 
   "git": {
     "commitStyle": "conventional-commits",
     "coAuthor": true,
     "autoStage": false
+  },
+
+  "promptStrategy": {
+    "referencePlaybook": ".claudecode/prompt-playbook.md",
+    "usePlanningMode": "for-complex-features",
+    "alwaysSpecify": ["real-time-constraints", "performance-targets", "test-coverage", "learning-objectives"]
   }
 }

@@ -1,5 +1,25 @@
 # Claude Code Instructions for Audio DSP Experiments
 
+## Essential Context Documents
+
+**Before starting any work session, read these documents to understand project context:**
+
+### Always Review
+- [README.md](../README.md) - Project overview, technology stack, repository structure, philosophy
+- [docs/project-statement.md](../docs/project-statement.md) - Mission statement, learning objectives, success metrics, technical approach
+
+### Current Project Work
+- [naughty-and-tender/README.md](../naughty-and-tender/README.md) - Active project architecture, features, and implementation status
+- [docs/naughty-and-tender.md](../docs/naughty-and-tender.md) - Detailed phases, learning goals, technical scope
+
+### Project Management & Workflow
+- [docs/project-management.md](../docs/project-management.md) - GitHub workflow, issue management, branching strategy, commit conventions
+
+### Shared Components
+- [shared/README.md](../shared/README.md) - Reusable DSP utilities strategy and extraction workflow
+
+**Note:** When switching to different projects in the future, update the "Current Project Work" section above to reference the new active project's documentation.
+
 ## Project Context
 
 This is a learning-focused audio DSP project. The primary goal is **understanding through implementation**, not perfection. Each plugin and tool serves as a vehicle for exploring synthesis, effects, and audio analysis concepts.
@@ -79,6 +99,20 @@ fn oscillator_frequency_accuracy() {
     assert!((zero_crossings - 880).abs() < 2); // 880 = 440 cycles * 2 crossings
 }
 ```
+
+## IDE Diagnostics & Error Detection
+
+### Proactive Issue Detection
+- **Always check IDE diagnostics** before and during coding
+- Use type errors, syntax warnings, and linter feedback to guide implementation
+- Fix diagnostic issues immediately rather than accumulating technical debt
+- Leverage IDE's real-time feedback for DSP algorithm correctness
+
+### Test Coverage Verification
+- **After implementing any DSP feature**: Verify test coverage
+- Critical DSP algorithms (oscillators, filters, envelopes) require comprehensive tests
+- Run tests before marking feature complete
+- Document test results in PR/commit messages
 
 ## Workflow Preferences
 
