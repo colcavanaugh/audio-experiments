@@ -58,23 +58,37 @@ This project explores DSP across several key areas:
 
 ## Repository Structure
 
+This project uses a **Cargo workspace** architecture to maximize code reuse between plugins. Shared DSP components live in `shared/`, while plugin-specific code stays in individual plugin directories.
+
 ```
 Experiments/
 ├── docs/                           # Project documentation
 │   ├── project-statement.md       # Overall vision and goals
+│   ├── architecture.md            # Code organization & workspace structure
 │   ├── naughty-and-tender.md      # Specific project docs
 │   └── project-management.md      # Workflow and processes
 │
-├── naughty-and-tender/            # First synthesizer project
-│   ├── src/                       # Source code
-│   ├── Cargo.toml                 # Rust dependencies
+├── shared/                        # Shared DSP crates (reusable components)
+│   ├── dsp-core/                  # Core DSP algorithms (oscillators, filters, envelopes)
+│   ├── audio-utils/               # Audio utilities (smoothing, denormals, etc.)
+│   └── modulation/                # Modulation system (LFOs, routing)
+│
+├── naughty-and-tender/            # First synthesizer plugin
+│   ├── src/                       # Plugin-specific code
+│   ├── Cargo.toml                 # Depends on shared crates
 │   └── README.md                  # Project-specific readme
 │
-├── shared/                        # Shared DSP utilities
-│   └── (future reusable components)
+├── library/                       # Research & knowledge base
+│   ├── sources/                   # Research materials
+│   ├── research-notes/            # DSP analysis & theory
+│   ├── educational-articles/      # Learning materials
+│   └── implementation-guides/     # Practical implementation guidance
 │
+├── Cargo.toml                     # Workspace definition
 └── README.md                      # This file
 ```
+
+**[→ See architecture.md for detailed code organization rules](./docs/architecture.md)**
 
 ## Technology Stack
 
