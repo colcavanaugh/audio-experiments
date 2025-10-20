@@ -1,0 +1,17 @@
+[package]
+name = "naughty-and-tender"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[lib]
+name = "naughty_and_tender"
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+nih_plug = { workspace = true }
+nih_plug_egui = { git = "https://github.com/robbert-vdh/nih-plug.git" }
+shared-core = { workspace = true }
+
+[build-dependencies]

@@ -1,0 +1,29 @@
+[workspace]
+resolver = "2"
+members = [
+    "naughty-and-tender",
+    "shared/*",
+]
+exclude = ["xtask"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Col Cavanaugh <colcavanaugh@users.noreply.github.com>"]
+license = "MIT OR Apache-2.0"
+
+[workspace.dependencies]
+# nih-plug framework
+nih_plug = { git = "https://github.com/robbert-vdh/nih-plug.git" }
+
+# Shared utilities
+shared-core = { path = "shared/core" }
+
+[profile.release]
+lto = "thin"
+strip = "symbols"
+
+[profile.profiling]
+inherits = "release"
+debug = true
+strip = "none"
